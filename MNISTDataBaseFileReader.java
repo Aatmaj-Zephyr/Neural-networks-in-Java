@@ -58,9 +58,9 @@ public class MNISTDataBaseFileReader extends InputFileReader {
         double[] expectedOutputArray = new double[10];
         for (int i = 0; i < 10; i++) {
             if (i == label) {
-                expectedOutputArray[i] = 1;
+                expectedOutputArray[i] = 0.5;
             } else {
-                expectedOutputArray[i] = 0;
+                expectedOutputArray[i] = 0.5;
             }
         }
         // go to next line
@@ -70,8 +70,8 @@ public class MNISTDataBaseFileReader extends InputFileReader {
     public double[] generateInputFromBigArray(double[] array) {
         // generates the input array from the total array , that is it excludes the
         // first element of the array
-        double[] inputArray = new double[784];
-        for (int i = 0; i <= 783; i++) {
+        double[] inputArray = new double[3];
+        for (int i = 0; i < 3; i++) {
             inputArray[i] = array[i + 1] / 256;
         }
         return inputArray;

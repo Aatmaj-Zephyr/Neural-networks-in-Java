@@ -6,7 +6,7 @@ public class LayerManager {
     public static double lossFunction;
     public static int batchControlCounter= 1;
     public static int batchsize=1;
-    static final double learningRate = 0.01;
+    static final double learningRate = 10;
 
     ArrayList<Layer> listOfLayers = new ArrayList<Layer>(); // polymporphism
     public InputLayer InputLayer;
@@ -88,7 +88,6 @@ public class LayerManager {
         // lossFunction,
         // storing the old loss function in the variable old lossFunction
         
-        LayerManager.lossFunction = calculateLossFunction();
     }
 
 

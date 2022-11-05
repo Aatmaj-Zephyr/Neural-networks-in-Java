@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
-		int[] layerArray = { 784, 16, 16, 10 };
+		int[] layerArray = { 3, 5, 2 };
 		int batchsize=1;
 		LayerManager myLayerManager = new LayerManager(layerArray,batchsize);
 		// The new method must be outside the train method.
