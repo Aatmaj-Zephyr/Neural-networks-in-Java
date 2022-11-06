@@ -11,10 +11,10 @@ public class Trainer {
     }
 
     public void train(int epochs) {
-        for (int j = 0; j <= epochs*20; j++) {
-        try{
-            myMnistDataBaseFileReader=new MNISTDataBaseFileReader("Ragasdata.csv");
-            }catch(Exception ex){}
+        for (int j = 0; j <= 10001; j++) {
+        /*try{
+            myMnistDataBaseFileReader=new MNISTDataBaseFileReader("ragasdata.csv");
+            }catch(Exception ex){}*/
         for (int i = 0; i <= epochs; i++) {
          
             // Getting the next image from the mnist database.
