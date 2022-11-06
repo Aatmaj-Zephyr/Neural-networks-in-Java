@@ -11,8 +11,12 @@ public class Trainer {
     }
 
     public void train(int epochs) {
+        for (int j = 0; j <= epochs*20; j++) {
+        try{
+            myMnistDataBaseFileReader=new MNISTDataBaseFileReader("Ragasdata.csv");
+            }catch(Exception ex){}
         for (int i = 0; i <= epochs; i++) {
-
+         
             // Getting the next image from the mnist database.
             myMnistDataBaseFileReader.next();
 
@@ -32,6 +36,26 @@ public class Trainer {
         }
 
     }
+    for (int i = 0; i <= 5; i++) {
+         
+        // Getting the next image from the mnist database.
+        myMnistDataBaseFileReader.next();
+
+        // Getting the expected output array from the mnist database.
+        expectedLayer = myMnistDataBaseFileReader.getExpectedOutputArray();
+
+        // Getting the input array from the mnist database.
+        inputLayer = myMnistDataBaseFileReader.getInputArray();
+
+        // Getting the label of the image from the mnist database.
+        label = myMnistDataBaseFileReader.getLabel();
+
+        System.out.print(" actual " + label);
+
+        train();
+
+    }
+}
 
     public void train() {
         // Heart of the code

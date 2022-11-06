@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
-		int[] layerArray = { 784, 16, 16, 10 };
+		int[] layerArray = { 784, 16, 32,32,16, 10 };
 		LayerManager myLayerManager = new LayerManager(layerArray);
 		// The new method must be outside the train method.
 
@@ -16,7 +16,8 @@ public class Main {
 																										// for
 																										// loop
 			Trainer myTrainer = new Trainer(myLayerManager, myMnistDataBaseFileReader);
-			myTrainer.train(55553);
+			myTrainer.train(55);
+			
 
 			// System.out.println(LayerManager.ConnectionHeap);
 
