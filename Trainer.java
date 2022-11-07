@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+
 public class Trainer {
     public LayerManager myLayerManager;
     public double[] expectedLayer;
@@ -11,7 +13,7 @@ public class Trainer {
     }
 
     public void train(int epochs) {
-        for (int j = 0; j <= 10001; j++) {
+        for (int j = 0; j <= 1; j++) {
         /*try{
             myMnistDataBaseFileReader=new MNISTDataBaseFileReader("ragasdata.csv");
             }catch(Exception ex){}*/
@@ -34,27 +36,10 @@ public class Trainer {
             train();
 
         }
+        
 
     }
-    for (int i = 0; i <= 5; i++) {
-         
-        // Getting the next image from the mnist database.
-        myMnistDataBaseFileReader.next();
-
-        // Getting the expected output array from the mnist database.
-        expectedLayer = myMnistDataBaseFileReader.getExpectedOutputArray();
-
-        // Getting the input array from the mnist database.
-        inputLayer = myMnistDataBaseFileReader.getInputArray();
-
-        // Getting the label of the image from the mnist database.
-        label = myMnistDataBaseFileReader.getLabel();
-
-        System.out.print(" actual " + label);
-
-        train();
-
-    }
+   
 }
 
     public void train() {
