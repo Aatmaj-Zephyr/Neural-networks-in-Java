@@ -72,7 +72,7 @@ public class Trainer {
         myLayerManager.forwardPropagate();
 
 
-        int prediction = getMostSignificantNeuronAsPrediction(myLayerManager);
+        //int prediction = getMostSignificantNeuronAsPrediction(myLayerManager);
         /*if(label==7){
         System.out.print(" Label " + label+" ");
 
@@ -80,13 +80,13 @@ public class Trainer {
     }*/
         
        
-        myLayerManager.relevancePropagate(7,5);
+        //myLayerManager.relevancePropagate(7,5);
         
 
         System.out.print("\n");
-        if(prediction == label){
-            correctCounter++;
-        }
+        System.out.print(label);
+        System.out.print(myLayerManager.OutputLayer);
+        
         
     }
     public void train() {
@@ -100,9 +100,7 @@ public class Trainer {
 
         myLayerManager.backwardPropagate();
 
-        int prediction = getMostSignificantNeuronAsPrediction(myLayerManager);
         
-       // System.out.println(" prediction " + prediction);
     }
 
     public static int getMostSignificantNeuronAsPrediction(LayerManager myLayerManager) {

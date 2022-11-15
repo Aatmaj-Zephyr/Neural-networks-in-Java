@@ -59,10 +59,97 @@ public class MNISTDataBaseFileReader extends InputFileReader {
     public double[] generateExpectedOutputArrayFromLabel() {
         double[] expectedOutputArray = new double[outputLayerLength];
         for (int i = 0; i < 10; i++) {
-            if (i == label) {
-                expectedOutputArray[i] = 1;
-            } else {       
-                expectedOutputArray[i] = 0;
+            if(i==0){
+                expectedOutputArray[0]=1; //Top circle
+                expectedOutputArray[1]=1; //Bottom circle
+                expectedOutputArray[2]=0; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
+            }
+            else if(i==1){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+                
+            }
+            else if(i==2){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=1; //Top horizontal line 
+                expectedOutputArray[4]=1; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
+            }
+            else if(i==3){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=0; //Straight Line
+                expectedOutputArray[3]=1; //Top horizontal line 
+                expectedOutputArray[4]=1; //Bottom horizontal line 
+                expectedOutputArray[5]=1; //mid horizontal line 
+
+            }
+            else if(i==4){
+                expectedOutputArray[0]=1; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=1; //mid horizontal line 
+
+            }
+
+            else if(i==5){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=1; //Bottom circle
+                expectedOutputArray[2]=0; //Straight Line
+                expectedOutputArray[3]=1; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=1; //mid horizontal line 
+
+            }
+            else if(i==6){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=1; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
+            }
+            else if(i==7){
+                expectedOutputArray[0]=0; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=1; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
+            }
+
+            else if(i==8){
+                expectedOutputArray[0]=1; //Top circle
+                expectedOutputArray[1]=1; //Bottom circle
+                expectedOutputArray[2]=0; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
+            }
+            else if(i==9){
+                expectedOutputArray[0]=1; //Top circle
+                expectedOutputArray[1]=0; //Bottom circle
+                expectedOutputArray[2]=1; //Straight Line
+                expectedOutputArray[3]=0; //Top horizontal line 
+                expectedOutputArray[4]=0; //Bottom horizontal line 
+                expectedOutputArray[5]=0; //mid horizontal line 
+
             }
         }
         // go to next line
