@@ -70,12 +70,13 @@ public class Trainer {
         myLayerManager.setExpectedOutputArray(expectedLayer);
         myLayerManager.forwardPropagate(); //for calculation of MSE
         int prediction = getMostSignificantNeuronAsPrediction(myLayerManager);
-        if(prediction!=label){
+        if(true){
 
        // myLayerManager.relevancePropagate();//must be before forwardPropagatewithExclusion and after forwardPropagate
 
-        myLayerManager.forwardPropagatewithExclusion();
+        myLayerManager.forwardPropagatewithExclusion( prediction);
         }
+        System.out.println(expectedLayer);
         double confidence = getconfidence(myLayerManager);
         /*if(label==7){
         System.out.print(" Label " + label+" ");
