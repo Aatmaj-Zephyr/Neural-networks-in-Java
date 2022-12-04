@@ -110,7 +110,7 @@ public class LayerManager {
         // lossFunction,
         // storing the old loss function in the variable old lossFunction
 
-        double temp = calculateMSEForprediction(prediction);
+        double temp = lossFunction - calculateMSEForprediction(prediction);
 
         //If your error is increasing when you remove a pixel, that pixel is important, i.e positive pixel.
         //which means that the value if temp is negative

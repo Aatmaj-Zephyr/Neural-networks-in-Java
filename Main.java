@@ -12,7 +12,7 @@ public class Main {
 		parameter.setRectificationFunction("sigmoid");
 		Trainer myTrainer = new Trainer();
 		myTrainer.train(4000);
-		myTrainer.test(12);
+		myTrainer.test(2);
 
 
 			// System.out.println(LayerManager.ConnectionHeap);
