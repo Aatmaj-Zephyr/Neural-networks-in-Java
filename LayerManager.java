@@ -110,13 +110,14 @@ public class LayerManager {
         // lossFunction,
         // storing the old loss function in the variable old lossFunction
 
-        double temp = lossFunction - calculateMSEForprediction(prediction);
+        double temp = 100-((lossFunction - calculateMSEForprediction(prediction)) /lossFunction) *100;
+       //100- old - new / old *100
 
         //If your error is increasing when you remove a pixel, that pixel is important, i.e positive pixel.
         //which means that the value if temp is negative
 
 // This is the code that is used to calculate the relevance of each pixel.
-System.out.print((int)(temp*10000+127)+",");
+System.out.print((int)(1000000*temp)+",");
         
         if(temp==0){
             zeroPixels++;

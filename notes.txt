@@ -1,0 +1,6 @@
+A 5000 for 10 epochs
+B 50000 for 1 epoch
+C 50000 for 10 epochs
+
+1 for 5
+2 for 9

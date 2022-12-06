@@ -20,7 +20,7 @@ public class Trainer {
     }
 
     public void train(int epochs) {
-        for (int j = 0; j <= 10; j++) {
+        for (int j = 0; j < 10; j++) {
             parameter.setTrainingFileReader("mnist_train.csv", "mnist"); 
             this.trainingFileReader = parameter.getTrainingFileReader();
         for (int i = 0; i <= epochs; i++) {

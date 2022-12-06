@@ -11,7 +11,7 @@ public class Main {
 		parameter.setBatchsize(10);
 		parameter.setRectificationFunction("sigmoid");
 		Trainer myTrainer = new Trainer();
-		myTrainer.train(4000);
+		myTrainer.train(50000);
 		myTrainer.test(2);
 
 
