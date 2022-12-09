@@ -69,6 +69,7 @@ public class Trainer {
 
         myLayerManager.setExpectedOutputArray(expectedLayer);
         myLayerManager.forwardPropagate(); //for calculation of MSE
+        myLayerManager.relevancePropagate();
         int prediction = getMostSignificantNeuronAsPrediction(myLayerManager);
         if(true){
 

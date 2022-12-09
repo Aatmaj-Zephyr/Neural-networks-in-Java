@@ -195,6 +195,10 @@ System.out.print((int)(1000000*temp)+",");
             listOfLayers.get(i).relevancePropagate();
             
         }
+        for(Neuron i:this.InputLayer.listOfNeurons){
+            System.out.print((int)(NN.sigmoid(i.relevance)*255)+",");
+        }
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n ");
     }
     // This is the code that is used to calculate the relevance of each pixel.
     public void relevancePropagate(int layerNumber,int neuronNumber) {
