@@ -1,3 +1,7 @@
+# Predecessor of my project ANN4j
+
+
+
 ### This is an implementation of Neural Network using Java.
 
 Neurlal Networks in Java! Thats not something very common right? You can go through this code to understand how can we use the power of Object Oriented Analysis and Design in making systems as complicated as a neural network. 
